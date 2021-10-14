@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이디야</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        margin-left: auto;
+        margin-right: auto;
+        width: 980px;
+
+        height: 460px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "circle",
+        "author": "충청북도 청주시 흥덕구 성화동 450",
+        "sceneFadeDuration": 1000
+    },
+// 만약 버튼을 두개 이상 하고싶다면 hotspots []안에 배열처럼 {}추가하기 쉼표(,) 필수 
+    "scenes": {
+
+        "circle": {
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/rztnOLH.jpg",  //이디야 처음
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw":-90,
+                    "type": "scene",
+                   // "text": "앞으로 이동", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "1_1" // 이 버튼을 통해 이동할 다음방 이름 
+                }
+                /*{
+                    "pitch": -40,
+                    "yaw":180,
+                    "type": "scene",
+                    "text": "앞으로 이동", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "room1_1" // 이 버튼을 통해 이동할 다음방 이름 
+                }   */      
+            ]
+        },
+
+        "1_1": { //처음에서 한 칸 앞으로 이동
+            "title": "이디야", 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 180,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/ZG5mOKN.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 190,
+                    "type": "scene",
+                  //  "text": "앞으로 이동", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "1_2" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": -50,
+                    "type": "scene",
+                  //  "text": "건물 밖으로 이동", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "1_11" // 이 버튼을 통해 이동할 다음방 이름 
+                }      
+            ]
+        },
+
+        "1_2": { //들어가서 두 걸음 테이블
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 200,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/MUq1mgS.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 100,
+                    "type": "scene",
+                   // "text": "앞으로 이동", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "1_5" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 160,
+                    "type": "scene",
+                  //  "text": "사선으로 이동", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "1_4" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 210,
+                    "type": "scene",
+                   // "text": "오른쪽 사선으로 이동", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "1_1" // 이 버튼을 통해 이동할 다음방 이름 
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 0,
+                    "type": "scene",
+                   // "text": "앞으로 이동", // 다음 방으로 이동할 버튼 위에 뜨는 정보 이름  
+                    "sceneId": "1_9" // 이 버튼을 통해 이동할 다음방 이름 
+                }      
+            ]
+        },
+        
+        "1_3": { 
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 200,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/NbVXmpL.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -20,
+                    "type": "scene",
+                   // "text": "오른쪽 사선으로 이동",
+                    "sceneId": "1_2" 
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -90,
+                    "type": "scene",
+                  //  "text": "왼쪽 사선으로 이동",
+                    "sceneId": "1_5" 
+                },
+                
+                {
+                    "pitch": -15,
+                    "yaw": 100,
+                    "type": "scene",
+                   // "text": "앞으로 이동",
+                    "sceneId": "1_6" 
+                }    
+            ]
+        },
+        "1_4": {
+            "title": "이디야",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/700r4K2.jpg",
+            "hotSpots": [
+               
+                {
+                    "pitch": -15,
+                    "yaw": -60,
+                    "type": "scene",
+                   // "text": "오른쪽 사선으로 이동",
+                    "sceneId": "1_5"
+                 },
+                 {
+                    "pitch": -10,
+                    "yaw": 250,
+                    "type": "scene",
+                  //  "text": "왼쪽 사선으로 이동",
+                    "sceneId": "1_2"
+                 }
+            ]
+        },
+       "1_5": {
+            "title": "이디야",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/DNL4jcg.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -30,
+                    "type": "scene",
+                  //  "text": "사선으로 이동",
+                    "sceneId": "1_1",
+                    "targetYaw": 190,
+                    "targetPitch": -15
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 5,
+                    "type": "scene",
+                   // "text": "앞으로 이동",
+                    "sceneId": "1_2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 100,
+                    "type": "scene",
+                   // "text": "옆으로 이동",
+                    "sceneId": "1_3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -70,
+                    "type": "scene",
+                   // "text": "왼쪽 사선으로 이동",
+                    "sceneId": "1_4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+
+            ]
+        },
+           "1_6": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 200,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/e4Yve6k.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -90,
+                    "type": "scene",
+                   // "text": "이동ㅇ",
+                    "sceneId": "1_3" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 100,
+                    "type": "scene",
+                   // "text": "이동",
+                    "sceneId": "1_7" 
+                  
+                }
+                ,
+                {
+                    "pitch": -10,
+                    "yaw": 20,
+                    "type": "scene",
+                    //"text": "이동",
+                    "sceneId": "1_9" 
+                  
+                }      
+            ]
+        },
+        "1_7": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 0,
+            "yaw": -40,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/MhXGgyC.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": -50,
+                    "type": "scene",
+                   // "text": "out",
+                    "sceneId": "1_6" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 130,
+                    "type": "scene",
+                  //  "text": "in",
+                    "sceneId": "1_8" 
+                },
+                 {
+                    "pitch": -10,
+                    "yaw": 20,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_9" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 70,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_10" 
+                }       
+            ]
+        },
+          "1_8": { //밖으로 나가기////////////
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 0,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/WzWPDC5.jpg",  
+            "hotSpots": [
+               
+                {
+                    "pitch": -10,
+                    "yaw": 80,
+                    "type": "scene",
+                    //"text": "이동ㅇ",
+                    "sceneId": "1_7" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 125,
+                    "type": "scene",
+                   // "text": "이동ㅇ",
+                    "sceneId": "1_9" 
+                }      
+            ]
+        },
+        "1_9": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/HLoNcIC.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": -120,
+                    "type": "scene",
+                  //  "text": "in",
+                    "sceneId": "1_10" 
+                },
+                 {
+                    "pitch": -20,
+                    "yaw": 0,
+                    "type": "scene",
+                    //"text": "in",
+                    "sceneId": "1_7" 
+                },
+                {
+                    "pitch": -20,
+                    "yaw": -40,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_8" 
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 90,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_2" 
+                }
+            ]
+        },
+        "1_10": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/wz0yE2v.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -210,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_9" 
+                }
+            ]
+        },
+        "1_11": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/JRcFGvl.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -340,
+                    "type": "scene",
+                   // "text": "in3",
+                    "sceneId": "1_1" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": -80,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_12" 
+                }
+            ]
+        },
+        "1_12": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/adeaJZ4.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -300,
+                    "type": "scene",
+                   // "text": "in3",
+                    "sceneId": "1_11" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": -30,
+                    "type": "scene",
+                    //"text": "in",
+                    "sceneId": "1_13" 
+                }
+            ]
+        },
+        "1_13": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/4cn9p5U.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -180,
+                    "type": "scene",
+                  //  "text": "in",
+                    "sceneId": "1_12" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 0,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_14" 
+                }
+            ]
+        },
+        "1_14": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/5QOMhS6.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -190,
+                    "type": "scene",
+                  //  "text": "in",
+                    "sceneId": "1_13" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": -10,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_15" 
+                }
+            ]
+        },
+        "1_15": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/SWqILS1.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -280,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_14" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": -10,
+                    "type": "scene",
+                    //"text": "in",
+                    "sceneId": "1_16" 
+                }
+            ]
+        },
+        "1_16": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/c1fCdCc.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -200,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_15" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 30,
+                    "type": "scene",
+                    //"text": "in2",
+                    "sceneId": "1_17" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 90,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_18" 
+                }
+            ]
+        },
+        "1_17": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/zwtRWO3.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": -120,
+                    "type": "scene",
+                   // "text": "in",
+                    "sceneId": "1_8" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": -20,
+                    "type": "scene",
+                    //"text": "in2",
+                    "sceneId": "1_16" 
+                }
+            ]
+        },
+        "1_18": { //밖으로 나가기
+            "title": "이디야", // 첫번째로 뜰 화면 방 이름 
+            "hfov": 110,
+            "pitch": 10,
+            "yaw": 80,
+            "type": "equirectangular",
+            "panorama": "https://i.imgur.com/t4D2lR0.jpg",  
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -80,
+                    "type": "scene",
+                    //"text": "in",
+                    "sceneId": "1_16" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 70,
+                    "type": "scene",
+                    //"text": "in2",
+                    "sceneId": "1_10" 
+                }
+            ]
+        }
+
+
+    }
+});
+</script>
+
+
+</body>
+</html>
